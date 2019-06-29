@@ -38,8 +38,7 @@ window.onload = function(){
   function check(){
     // Removes diacritics
     normalizedClearText = clearTextArea.value.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-    if( clearText != normalizedClearText
-      || shiftValue != setShiftValue() ){
+    if( clearText != normalizedClearText || shiftValue != setShiftValue() ){
         shiftValue = setShiftValue();
         clearText = normalizedClearText
         encryptedText = encrypt(clearText);
