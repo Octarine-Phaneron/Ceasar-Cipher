@@ -25,7 +25,7 @@ window.onload = function(){
   let loop = setInterval(check, 1500);
 
   /* Checks the value given by the user, if it's a number
-  * sets it as is, if it's not, sets 0 */
+   * sets it as is, if it's not, sets 0 */
   function setShiftValue(){
     if( isNaN( parseInt(shiftValueInput.value) ) ){
       return 0;
@@ -34,7 +34,7 @@ window.onload = function(){
   }
 
   /* Checks if the text has changed, if it has,
-   * gets the new text and sends it to the encrypt function */
+   * gets the new text and sends it to the encrypt function  */
   function check(){
     // Removes diacritics
     normalizedClearText = clearTextArea.value.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
@@ -46,7 +46,7 @@ window.onload = function(){
     }
   }
     /* For each letter of the clear text, checks what it's ASCII code is. then shifts it's value accordingly.
-    Returns encrypted text */
+     * Returns encrypted text */
   function encrypt(clearText){
       let tempEncrypted = "";
       let charAscii;
@@ -71,9 +71,7 @@ window.onload = function(){
     *  if the shifted value is out of the defined boundaries
     * ( <minValue || >maxValue), the value is set by looping
     * through the given range ( if min=10 & max=20, 25
-    * becomes 14).
-    * I'm not good at math, there's surely a better way to do it...
-    */
+    * becomes 14). */
   function shift( char, minValue, maxValue ){
       charCode = char.charCodeAt(0)
       charCode += shiftValue;
