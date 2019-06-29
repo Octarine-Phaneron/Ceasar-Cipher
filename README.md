@@ -21,10 +21,10 @@ window.onload = function(){
   let clearText = "";
   let encryptedText = "";
 
-  // start the loop to check if anything's changed every 1.5s.
+  // starts the loop to check if anything's changed every 1.5s.
   let loop = setInterval(check, 1500);
 
-  /* Check the value given by the user, if it's a number
+  /* Checks the value given by the user, if it's a number
   * sets it as is, if it's not, sets 0 */
   function setShiftValue(){
     if( isNaN( parseInt(shiftValueInput.value) ) ){
@@ -33,8 +33,8 @@ window.onload = function(){
     return parseInt(shiftValueInput.value);
   }
 
-  /* Check if the text has changed, if it has,
-  * get the new text and sends it to the encrypt function */
+  /* Checks if the text has changed, if it has,
+   * gets the new text and sends it to the encrypt function */
   function check(){
     // Removes diacritics
     normalizedClearText = clearTextArea.value.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
@@ -46,7 +46,7 @@ window.onload = function(){
         encryptedTextArea.value = encryptedText;
     }
   }
-    /* For each letter of the clear text, check what it's ASCII code is. then shift it's value accordingly.
+    /* For each letter of the clear text, checks what it's ASCII code is. then shifts it's value accordingly.
     Returns encrypted text */
   function encrypt(clearText){
       let tempEncrypted = "";
