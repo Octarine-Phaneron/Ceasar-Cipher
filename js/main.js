@@ -15,8 +15,8 @@ window.onload = function(){
   let clearText = "";
   let encryptedText = "";
 
-  // starts the loop to check if anything's changed every 1.5s.
-  let loop = setInterval(check, 1500);
+  // starts the loop to check if anything's changed every 1s.
+  let loop = setInterval(check, 1000);
 
   /* Checks the value given by the user, if it's a number
    * sets it as is, if it's not, sets 0 */
