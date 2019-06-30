@@ -1,5 +1,7 @@
 # JavaScript Simple Ceasar Cipher
 
+Try it [HERE](https://rawcdn.githack.com/Octarine-Phaneron/Ceasar-Cipher/master/)
+
 I just tried to make a JS ceasar cipher, it might not be the best way to do it.
 Here is the code : 
 
