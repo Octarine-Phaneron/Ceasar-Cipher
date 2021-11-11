@@ -39,7 +39,7 @@ window.onload = function(){
         encryptedTextArea.value = encryptedText;
     }
   }
-    /* For each letter of the clear text, checks what it's ASCII code is. then shifts it's value accordingly.
+    /* For each letter of the clear text, checks what it's ASCII code is. then shifts its value accordingly.
      * Returns encrypted text */
   function encrypt(clearText){
       let tempEncrypted = "";
